@@ -100,14 +100,14 @@
 <li><a target="_blank" rel="noopener" href="https://pythonjishu.com/kjvygvaottgnuoy/">JavaScript 之 Fetch 操作</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.runoob.com/js/js-promise.html">JavaScript 之 Promise</a></li>
 </ol>
-<h2 id="洛谷的API"><a href="#洛谷的API" class="headerlink" title="洛谷的API"></a>洛谷的API</h2><p>在洛谷首页，F12打开开发者模式，点“网络”或“NetWork”，然后发一条犇犇，查看请求：</p>
+<h2 id="洛谷的-API"><a href="#洛谷的-API" class="headerlink" title="洛谷的 API"></a>洛谷的 API</h2><p>在洛谷首页，F12打开开发者模式，点“网络”或“NetWork”，然后发一条犇犇，查看请求：</p>
 <p><img src="/images/JC-by-paste-on-luogu-1.jpg"></p>
 <p><del>显然，</del>postBenben是发犇犇，watching是获取关注的犇犇，点“postBenben”：</p>
 <p><img src="/images/JC-by-paste-on-luogu-2.jpg"></p>
 <p>然后点”负载“或”Payloads“：</p>
 <p><img src="/images/JC-by-paste-on-luogu-3.jpg"></p>
 <p>由此可得，发犇犇是对 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/api/feed/postBenben">&#x2F;api&#x2F;feed&#x2F;postBenben</a> 发送一个POST请求，负载只有一条：”content: 犇犇内容“</p>
-<p>其他操作也可以用同样的方法抓包，结果：</p>
+<p>其他操作也可以用同样的方法抓包，抓包结果：</p>
 <table>
 <thead>
 <tr>
@@ -149,15 +149,59 @@
 <td>uid</td>
 <td>对方uid</td>
 <td>relationship</td>
-<td>新状态：0&#x3D;取关，1&#x3D;关注，2&#x3D;拉黑</td>
+<td>新状态（0&#x3D;取关，1&#x3D;关注，2&#x3D;拉黑）</td>
 </tr>
 </tbody></table>
+<p>备注：先取关才能拉黑</p>
+<h2 id="JavaScript，上！"><a href="#JavaScript，上！" class="headerlink" title="JavaScript，上！"></a>JavaScript，上！</h2><p>根据上面分析结果，很容易写出 JavaScript 代码，粘到 Console 中运行即可：</p>
+<h4 id="犇犇"><a href="#犇犇" class="headerlink" title="犇犇"></a>犇犇</h4><div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        Benben Code
+    </div>
+    <div class='spoiler-content'>
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/feed/postBenben&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">headers</span>: [</span><br><span class="line">    [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">content</span>: <span class="string">&quot;111\n&quot;</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+    </div>
+</div>
+
+<h4 id="私信"><a href="#私信" class="headerlink" title="私信"></a>私信</h4><div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        Chat Code
+    </div>
+    <div class='spoiler-content'>
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/feed/postBenben&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">headers</span>: [</span><br><span class="line">    [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">content</span>: <span class="string">&quot;111\n&quot;</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+    </div>
+</div>
+
+<h4 id="犇犇-1"><a href="#犇犇-1" class="headerlink" title="犇犇"></a>犇犇</h4><div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        Benben Code
+    </div>
+    <div class='spoiler-content'>
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/feed/postBenben&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">headers</span>: [</span><br><span class="line">    [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">content</span>: <span class="string">&quot;111\n&quot;</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+    </div>
+</div>
+
+<h4 id="犇犇-2"><a href="#犇犇-2" class="headerlink" title="犇犇"></a>犇犇</h4><div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        Benben Code
+    </div>
+    <div class='spoiler-content'>
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/feed/postBenben&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">headers</span>: [</span><br><span class="line">    [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">content</span>: <span class="string">&quot;111\n&quot;</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+    </div>
+</div>
+
+
+
 <p><a href="$.get(%22/paste/xxxxxxxx?_contentOnly%22,d=%3Eeval(d.currentData.paste.data)">1</a></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://azaphodbeeblebrox.github.io/JC-by-paste-on-luogu/" data-id="clo6q31ds0005xsv5eyjabdk2" data-title="JC by paste on luogu" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://azaphodbeeblebrox.github.io/JC-by-paste-on-luogu/" data-id="clo6qde2w0005bgv53o7c6u9i" data-title="JC by paste on luogu" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
