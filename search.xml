@@ -124,6 +124,7 @@
 </div>
 
 <h4 id="最后一步"><a href="#最后一步" class="headerlink" title="最后一步"></a>最后一步</h4><p>我们能不能把 JC 的代码扔到云剪贴板上呢？当然也可以。直接把代码扔上去（注意一定要原汁原味，不要有任何多余内容），假设云剪贴板编号为xxxxxxxx，那么只要在 Console 中输入 <code>$.get(&quot;/paste/xxxxxxxx?_contentOnly&quot;,d=&gt;eval(d.currentData.paste.data))</code> 即可执行其中的代码。</p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p>编写HTML版的生成器</p>
 <blockquote>
 <h6 id="文章作者-AZaphodBeeblebrox，转载请注明出处！"><a href="#文章作者-AZaphodBeeblebrox，转载请注明出处！" class="headerlink" title="文章作者 AZaphodBeeblebrox，转载请注明出处！"></a>文章作者 <a href="https://github.com/AZaphodBeeblebrox">AZaphodBeeblebrox</a>，转载请注明出处！</h6></blockquote>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
