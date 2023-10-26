@@ -128,7 +128,10 @@
         HTML
     </div>
     <div class='spoiler-content'>
-        <iframe src="/HTMLs/JC-by-paste-on-luogu-1.html" height=500 width=750></iframe>
+        <div height=500 style="width: 100%;">
+    <iframe src="/HTMLs/JC-by-paste-on-luogu-1.html" height=500 style="width: 100%; top: 0;">
+    </iframe>
+</div>
 
 
 
