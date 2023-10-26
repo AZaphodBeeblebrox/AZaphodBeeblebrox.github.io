@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JC代码生成器</title>
+    <title>JC Generator</title>
     <script>
         var code = "fetch(\"\", {})\n";
         function generateCode() {
@@ -111,7 +111,7 @@
             document.getElementById("sloganInputs").style.display = "none";
             generateCode();
             setTimeout(function() {
-                alert('请复制生成的代码并在控制台中运行');
+                alert('Generation Done!');
                 }, 250);
             }
         
@@ -151,53 +151,53 @@
     </script>
 </head>
 <body>
-    <h1>JC代码生成器</h1>
+    <h1>JC Generator</h1>
     
-    <button id="addButton" onclick="showForm()">添加</button>
-    <button id="endButton" onclick="finish();">结束</button>
+    <button id="addButton" onclick="showForm()">Add Operation</button>
+    <button id="endButton" onclick="finish();">Finish</button>
     
     <form id="operationForm" style="display: none;">
-        <label for="operationType">选择操作类型:</label>
+        <label for="operationType">Please select operation type:</label>
         <select id="operationType" onchange="showInputs()">
-            <option value="">请选择</option>
-            <option value="benben">犇犇benben</option>
-            <option value="chat">私信chat</option>
-            <option value="follow">关注follow</option>
-            <option value="slogan">个签slogan</option>
+            <option value="">Please select...</option>
+            <option value="benben">Benben</option>
+            <option value="chat">Chat</option>
+            <option value="follow">Follow</option>
+            <option value="slogan">Slogan</option>
         </select>
         <br><br>
         
         <div id="benbenInputs" style="display: none;">
-            <label for="benbenContent">Benben内容:</label>
+            <label for="benbenContent">Benben Content:</label>
             <input type="text" id="benbenContent"><br><br>
         </div>
         
         <div id="chatInputs" style="display: none;">
-            <label for="chatUid">接收者UID:</label>
+            <label for="chatUid">reciever UID:</label>
             <input type="text" id="chatUid"><br><br>
             
-            <label for="chatContent">消息内容:</label>
+            <label for="chatContent">Message:</label>
             <input type="text" id="chatContent"><br><br>
         </div>
         
         <div id="followInputs" style="display: none;">
-            <label for="followUid">用户UID:</label>
+            <label for="followUid">User UID:</label>
             <input type="text" id="followUid"><br><br>
             
-            <label for="relationship">关系类型:</label>
+            <label for="relationship">Operation type:</label>
             <select id="relationship">
-                <option value="0">无关系</option>
-                <option value="1">关注</option>
-                <option value="2">拉黑</option>
+                <option value="0">No relationship</option>
+                <option value="1">Follow</option>
+                <option value="2">Block</option>
             </select><br><br>
         </div>
         
         <div id="sloganInputs" style="display: none;">
-            <label for="newSlogan">新个签:</label>
+            <label for="newSlogan">New slogan:</label>
             <input type="text" id="newSlogan"><br><br>
         </div>
         
-        <button type="button" onclick="generateCode(); hideForm();">生成代码</button>
+        <button type="button" onclick="generateCode(); hideForm();">Generate!</button>
     </form>
     
     <pre id="generatedCode"></pre>
