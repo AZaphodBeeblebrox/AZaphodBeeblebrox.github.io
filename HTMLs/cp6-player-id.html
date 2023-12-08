@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CP6 Player ID</title>
+    <script src="hasher.js"></script>
+    <script>
+        function checkpassword() {
+            password=document.getElementById('password').value;
+            hash=zaphodHash(password);
+            window.location.href=hash+'.html';
+        }
+    </script>
+</head>
+<body>
+    <h1><a href="/HTMLs/cp6-player-id.html">CP6 Player ID</a></h1>
+    <input type="password" id="password">
+    <button id="submit" onclick="checkpassword()">登录</button>
+</body>
+</html>
+
