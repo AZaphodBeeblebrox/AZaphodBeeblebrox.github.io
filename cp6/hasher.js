@@ -162,4 +162,4 @@ function zaphodHash(str) {
 function padZero(str, len) {
   let zeros = '00000000000000000000000000000000';
   return (zeros + str).slice(-len);
-}
+}<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
