@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>JC by paste on luogu</title>
-    <url>/JC-by-paste-on-luogu/</url>
+    <url>/JC-by-console-on-luogu/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在浏览器中，可以使用控制台的 <code>Console</code> 来进行请求。那么，我们能不能利用这一点来快速 JC 别人，甚至隔空 JC 别人呢？答案是，可以的。其实不仅仅是洛谷，其他网站也行，这里只是通过洛谷做一个示范而已。</p>
 <h2 id="前置芝士"><a href="#前置芝士" class="headerlink" title="前置芝士"></a>前置芝士</h2><ol>
 <li><a href="https://pythonjishu.com/kjvygvaottgnuoy/">JavaScript 之 Fetch 操作</a></li>
@@ -128,7 +128,7 @@
         HTML
     </div>
     <div class='spoiler-content'>
-        <iframe src="/HTMLs/JC-by-paste-on-luogu-1.html" height=500 style="width: 100%; top: 0;">
+        <iframe src="/HTML-assets/JC-by-console-on-luogu.html" height=500 style="width: 100%; top: 0;">
 </iframe>
 
 
