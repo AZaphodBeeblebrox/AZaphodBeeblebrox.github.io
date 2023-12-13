@@ -54,8 +54,8 @@
         
         <button type="button" onclick="generateCode(); hideForm();">Generate!</button>
     </form>
-    
-    <pre id="generatedCode"></pre>
+    <button type="button" id="copyCode" onclick="javascript: navigator.clipboard.writeText(code);alert('Copied!');" style="display: none;">Copy!</button>
+    <div id="output"><pre id="generatedCode"></pre></div>
 </body>
 </html>
 

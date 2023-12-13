@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom, #ADD8E6, #E0E0E0);
+    background: linear-gradient(to bottom right, #87CEEB, #ADD8E6);
 }
 
 h1 {
@@ -46,11 +46,19 @@ h1 {
     margin-top: 20px;
 }
 
-#addButton, #endButton {
+#addButton, #endButton, #copyCode {
     display: block;
     margin: 20px auto;
 }
 
 #generatedCode {
-    text-align: center;
+    text-align: left;
+    margin: 0 auto;
+    display: block;
+}
+
+#output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

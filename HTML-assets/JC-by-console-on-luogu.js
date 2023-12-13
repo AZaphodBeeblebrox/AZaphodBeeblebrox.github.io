@@ -105,6 +105,7 @@
             document.getElementById("followInputs").style.display = "none";
             document.getElementById("sloganInputs").style.display = "none";
             generateCode();
+            document.getElementById("copyCode").style.display = "block";
             setTimeout(function() {
                 alert('Generation Done!');
                 }, 250);
