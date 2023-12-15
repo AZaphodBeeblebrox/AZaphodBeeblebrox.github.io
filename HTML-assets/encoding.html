@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encoding</title>
+    <script src="encoding/rotationhash.js"></script>
+    <script src="encoding/base64.js"></script>
+    <script src="encoding/md5.js"></script>
+    <script>
+        function rotation_plainToCipher()
+        {
+            plain=document.getElementById('From').value;
+            seed=document.getElementById('seed').value;
+            document.getElementById('To').value=shuffle_encrypt(plain,seed);
+        }
+        function rotation_cipherToPlain()
+        {
+            cipher=document.getElementById('From').value;
+            seed=document.getElementById('seed').value;
+            document.getElementById('To').value=shuffle_decrypt(cipher,seed);
+        }
+        function base64_plainToCipher()
+        {
+            plain=document.getElementById('From').value;
+            document.getElementById('To').value=base64_encrypt(plain);
+        }
+        function base64_cipherToPlain()
+        {
+            cipher=document.getElementById('From').value;
+            document.getElementById('To').value=base64_decrypt(cipher);
+        }
+        function md5_16()
+        {
+            plain=document.getElementById('From').value;
+            document.getElementById('To').value=md5(plain).slice(8,-8);
+        }
+        function md5_32()
+        {
+            plain=document.getElementById('From').value;
+            document.getElementById('To').value=md5(plain);
+        }
+        function swap()
+        {
+            plain=document.getElementById('From').value;
+            cipher=document.getElementById('To').value;
+            document.getElementById('From').value=cipher;
+            document.getElementById('To').value=plain;
+        }
+    </script> 
+    <link rel="stylesheet" href="encoding.css"></link>
+</head>
+<body>
+    <div id="container">
+        <textarea id="From">Please input...</textarea>
+        <div id="panel">
+            <button class="button" onclick="rotation_plainToCipher()">Rotation Encrypt</button>
+            <button class="button" onclick="rotation_cipherToPlain()">Rotation Decrypt</button>
+            <button class="button" onclick="base64_plainToCipher()">Base64 Encrypt</button>
+            <button class="button" onclick="base64_cipherToPlain()">Base64 Decrypt</button>
+            <button class="button" onclick="md5_32()">MD5 (32bits)</button>
+            <button class="button" onclick="md5_16()">MD5 (16bits)</button>
+            <button class="button" onclick="swap()">Swap</button>
+            <div>Seed: <input class="number" id="seed" type="number"></div>
+        </div>
+        <textarea id="To" readonly="readonly"></textarea>
+    </div>
+    <p>Note: Rotation Encrypt/Decrypt need seed</p>
+</body>
+</html>
