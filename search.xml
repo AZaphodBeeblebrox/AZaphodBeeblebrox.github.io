@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>encoding tools</title>
+    <url>/encoding/</url>
+    <content><![CDATA[
+
+<iframe src="/HTML-assets/encoding.html" height=750 style="width: 100%; top: 0;"></iframe>
+
+
+
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <tags>
+        <tag>tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测评6号在线网络评测系统入口</title>
+    <url>/cp6-entrance/</url>
+    <content><![CDATA[<p><a href="/cp6/index.html">进入！</a></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+  </entry>
+  <entry>
     <title>JC by console on luogu</title>
     <url>/JC-by-console-on-luogu/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在浏览器中，可以使用控制台的 <code>Console</code> 来进行请求。那么，我们能不能利用这一点来快速 JC 别人，甚至隔空 JC 别人呢？答案是，可以的。其实不仅仅是洛谷，其他网站也行，这里只是通过洛谷做一个示范而已。</p>
@@ -144,26 +164,6 @@
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <tags>
         <tag>JC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测评6号在线网络评测系统入口</title>
-    <url>/cp6-entrance/</url>
-    <content><![CDATA[<p><a href="/cp6/index.html">进入！</a></p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-  </entry>
-  <entry>
-    <title>encoding tools</title>
-    <url>/encoding/</url>
-    <content><![CDATA[
-
-<iframe src="/HTML-assets/encoding.html" height=750 style="width: 100%; top: 0;"></iframe>
-
-
-
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <tags>
-        <tag>tools</tag>
       </tags>
   </entry>
 </search>
