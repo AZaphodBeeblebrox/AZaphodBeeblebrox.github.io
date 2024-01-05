@@ -105,228 +105,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://azaphodbeeblebrox.github.io/encoding/" data-id="clqntgri90005sgv59m6cdvih" data-title="encoding tools" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://azaphodbeeblebrox.github.io/encoding/" data-id="clr0lwz9d0003iov53kf567sf" data-title="encoding tools" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-cp6-entrance" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/cp6-entrance/" class="article-date">
-  <time class="dt-published" datetime="2023-11-25T12:39:58.000Z" itemprop="datePublished">2023-11-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/cp6-entrance/">测评6号在线网络评测系统入口</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><a href="/cp6/index.html">进入！</a></p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://azaphodbeeblebrox.github.io/cp6-entrance/" data-id="clqntgrie0009sgv58ty4d084" data-title="测评6号在线网络评测系统入口" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-JC-by-console-on-luogu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/JC-by-console-on-luogu/" class="article-date">
-  <time class="dt-published" datetime="2023-10-25T23:19:46.000Z" itemprop="datePublished">2023-10-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/JC-by-console-on-luogu/">JC by console on luogu</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在浏览器中，可以使用控制台的 <code>Console</code> 来进行请求。那么，我们能不能利用这一点来快速 JC 别人，甚至隔空 JC 别人呢？答案是，可以的。其实不仅仅是洛谷，其他网站也行，这里只是通过洛谷做一个示范而已。</p>
-<h2 id="前置芝士"><a href="#前置芝士" class="headerlink" title="前置芝士"></a>前置芝士</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://pythonjishu.com/kjvygvaottgnuoy/">JavaScript 之 Fetch 操作</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/js/js-promise.html">JavaScript 之 Promise</a></li>
-</ol>
-<h2 id="洛谷的-API"><a href="#洛谷的-API" class="headerlink" title="洛谷的 API"></a>洛谷的 API</h2><p>在洛谷首页，F12打开开发者模式，点“网络”或“NetWork”，然后发一条犇犇，查看请求：</p>
-<p><img src="/images/JC-by-paste-on-luogu-1.jpg"></p>
-<p><del>显然，</del>postBenben是发犇犇，watching是获取关注的犇犇，点“postBenben”：</p>
-<p><img src="/images/JC-by-paste-on-luogu-2.jpg"></p>
-<p>然后点”负载“或”Payloads“：</p>
-<p><img src="/images/JC-by-paste-on-luogu-3.jpg"></p>
-<p>由此可得，发犇犇是对 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/api/feed/postBenben">&#x2F;api&#x2F;feed&#x2F;postBenben</a> 发送一个POST请求，负载只有一条：”content: 犇犇内容“</p>
-<p>其他操作也可以用同样的方法抓包，抓包结果：</p>
-<table>
-<thead>
-<tr>
-<th>操作</th>
-<th>地址</th>
-<th>参数1名称</th>
-<th>参数1值</th>
-<th>参数2名称</th>
-<th>参数2值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>发犇犇</td>
-<td><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/api/feed/postBenben">&#x2F;api&#x2F;feed&#x2F;postBenben</a></td>
-<td>content</td>
-<td>犇犇内容</td>
-<td>无</td>
-<td>无</td>
-</tr>
-<tr>
-<td>发私信</td>
-<td><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/api/chat/new">&#x2F;api&#x2F;chat&#x2F;new</a></td>
-<td>user</td>
-<td>接收方uid</td>
-<td>content</td>
-<td>私信内容</td>
-</tr>
-<tr>
-<td>修改个签</td>
-<td><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/api/user/updateSlogan">&#x2F;api&#x2F;user&#x2F;updateSlogan</a></td>
-<td>slogan</td>
-<td>新个签</td>
-<td>无</td>
-<td>无</td>
-</tr>
-<tr>
-<td>关注&#x2F;取关&#x2F;拉黑</td>
-<td><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/api/user/updateRelationShip">&#x2F;api&#x2F;user&#x2F;updateRelationShip</a></td>
-<td>uid</td>
-<td>对方uid</td>
-<td>relationship</td>
-<td>新状态（0&#x3D;取关，1&#x3D;关注，2&#x3D;拉黑）</td>
-</tr>
-</tbody></table>
-<p>备注：先取关才能拉黑</p>
-<h2 id="JavaScript，上！"><a href="#JavaScript，上！" class="headerlink" title="JavaScript，上！"></a>JavaScript，上！</h2><p>根据上面分析结果，很容易写出 JavaScript 代码，粘到 Console 中运行即可：</p>
-<h4 id="犇犇"><a href="#犇犇" class="headerlink" title="犇犇"></a>犇犇</h4><div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        Benben Code
-    </div>
-    <div class='spoiler-content'>
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/feed/postBenben&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">headers</span>: [</span><br><span class="line">    [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">content</span>: <span class="string">&quot;犇犇内容&quot;</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-    </div>
-</div>
-
-<h4 id="私信"><a href="#私信" class="headerlink" title="私信"></a>私信</h4><div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        Chat Code
-    </div>
-    <div class='spoiler-content'>
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/chat/new&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">headers</span>: [</span><br><span class="line">    [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">user</span>: 对方uid,</span><br><span class="line">    <span class="attr">content</span>: <span class="string">&quot;私信内容&quot;</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-    </div>
-</div>
-
-<h4 id="关注"><a href="#关注" class="headerlink" title="关注"></a>关注</h4><div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        Follow Code
-    </div>
-    <div class='spoiler-content'>
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/user/updateRelationShip&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">headers</span>: [</span><br><span class="line">    [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">uid</span>: 对方uid,</span><br><span class="line">    <span class="attr">relationship</span>: 关系编号（<span class="number">0</span>=取关，<span class="number">1</span>=关注，<span class="number">2</span>=拉黑）</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-    </div>
-</div>
-
-<h4 id="个签"><a href="#个签" class="headerlink" title="个签"></a>个签</h4><div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        Slogan Code
-    </div>
-    <div class='spoiler-content'>
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/user/updateSlogan&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">headers</span>: [</span><br><span class="line">    [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">slogan</span>: <span class="string">&quot;新个签&quot;</span></span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-    </div>
-</div>
-
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>鉴于 <code>fetch</code> 属于 promise 语法，我们可以用 .then 把他们连接成一条指令，方便执行，例如：</p>
-<div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        JavaScript Code
-    </div>
-    <div class='spoiler-content'>
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;&quot;</span>, &#123;&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/feed/postBenben&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">headers</span>: [</span><br><span class="line">      [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">      [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">      [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">      <span class="attr">content</span>: <span class="string">&quot;I AK IOI&quot;</span>,</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/chat/new&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">headers</span>: [</span><br><span class="line">      [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">      [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">      [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">      <span class="attr">user</span>: -<span class="number">1</span>,</span><br><span class="line">      <span class="attr">content</span>: <span class="string">&quot;I AK IOI&quot;</span>,</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/user/updateSlogan&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">headers</span>: [</span><br><span class="line">      [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">      [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">      [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">      <span class="attr">slogan</span>: <span class="string">&quot;I AK IOI&quot;</span></span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">fetch</span>(<span class="string">&quot;https://www.luogu.com.cn/api/user/updateRelationShip&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">headers</span>: [</span><br><span class="line">      [<span class="string">&quot;content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>],</span><br><span class="line">      [<span class="string">&quot;referer&quot;</span>, <span class="string">&quot;https://www.luogu.com.cn/&quot;</span>],</span><br><span class="line">      [<span class="string">&quot;x-csrf-token&quot;</span>, <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;meta[name=csrf-token]&quot;</span>).<span class="property">content</span>],</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">      <span class="attr">uid</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="attr">relationship</span>: <span class="number">0</span></span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)</span><br><span class="line">;</span><br></pre></td></tr></table></figure>
-    </div>
-</div>
-
-<h4 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h4><p>要是一条指令一条指令手写还是太麻烦了，犹其是当你想恶搞同学的时候，因此我们提供一个 C++ 程序和一个 HTML 程序来为我们生成 JavaScript 代码：</p>
-<p><a href="/attachments/JC-by-console-on-luogu.exe">C++ 可执行文件</a></p>
-<div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        C++ Code
-    </div>
-    <div class='spoiler-content'>
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> chat[]=</span><br><span class="line"><span class="string">&quot;.then(data =&gt; &#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;  return fetch(\&quot;https://www.luogu.com.cn/api/chat/new\&quot;, &#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;    headers: [\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;content-type\&quot;, \&quot;application/json\&quot;],\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;referer\&quot;, \&quot;https://www.luogu.com.cn/\&quot;],\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;x-csrf-token\&quot;, document.querySelector(\&quot;meta[name=csrf-token]\&quot;).content],\n&quot;</span></span><br><span class="line"><span class="string">&quot;    ],\n&quot;</span></span><br><span class="line"><span class="string">&quot;    body: JSON.stringify(&#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;      user: %d,\n&quot;</span></span><br><span class="line"><span class="string">&quot;      content: \&quot;%s\&quot;,\n&quot;</span></span><br><span class="line"><span class="string">&quot;    &#125;),\n&quot;</span></span><br><span class="line"><span class="string">&quot;    method: \&quot;POST\&quot;\n&quot;</span></span><br><span class="line"><span class="string">&quot;  &#125;);\n&quot;</span></span><br><span class="line"><span class="string">&quot;&#125;)\n&quot;</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> benben[]=</span><br><span class="line"><span class="string">&quot;.then(data =&gt; &#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;  return fetch(\&quot;https://www.luogu.com.cn/api/feed/postBenben\&quot;, &#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;    headers: [\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;content-type\&quot;, \&quot;application/json\&quot;],\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;referer\&quot;, \&quot;https://www.luogu.com.cn/\&quot;],\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;x-csrf-token\&quot;, document.querySelector(\&quot;meta[name=csrf-token]\&quot;).content],\n&quot;</span></span><br><span class="line"><span class="string">&quot;    ],\n&quot;</span></span><br><span class="line"><span class="string">&quot;    body: JSON.stringify(&#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;      content: \&quot;%s\&quot;,\n&quot;</span></span><br><span class="line"><span class="string">&quot;    &#125;),\n&quot;</span></span><br><span class="line"><span class="string">&quot;    method: \&quot;POST\&quot;,\n&quot;</span></span><br><span class="line"><span class="string">&quot;  &#125;);\n&quot;</span></span><br><span class="line"><span class="string">&quot;&#125;)\n&quot;</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> follow[]=</span><br><span class="line"><span class="string">&quot;.then(data =&gt; &#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;  return fetch(\&quot;https://www.luogu.com.cn/api/user/updateRelationShip\&quot;, &#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;    headers: [\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;content-type\&quot;, \&quot;application/json\&quot;],\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;referer\&quot;, \&quot;https://www.luogu.com.cn/\&quot;],\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;x-csrf-token\&quot;, document.querySelector(\&quot;meta[name=csrf-token]\&quot;).content],\n&quot;</span></span><br><span class="line"><span class="string">&quot;    ],\n&quot;</span></span><br><span class="line"><span class="string">&quot;    body: JSON.stringify(&#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;      uid: %d,\n&quot;</span></span><br><span class="line"><span class="string">&quot;      relationship: %d\n&quot;</span></span><br><span class="line"><span class="string">&quot;    &#125;),\n&quot;</span></span><br><span class="line"><span class="string">&quot;    method: \&quot;POST\&quot;,\n&quot;</span></span><br><span class="line"><span class="string">&quot;  &#125;);\n&quot;</span></span><br><span class="line"><span class="string">&quot;&#125;)\n&quot;</span>;<span class="comment">//0=quguan 1=follow 2=lahei</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span> slogan[]=</span><br><span class="line"><span class="string">&quot;.then(data =&gt; &#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;  return fetch(\&quot;https://www.luogu.com.cn/api/user/updateSlogan\&quot;, &#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;    headers: [\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;content-type\&quot;, \&quot;application/json\&quot;],\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;referer\&quot;, \&quot;https://www.luogu.com.cn/\&quot;],\n&quot;</span></span><br><span class="line"><span class="string">&quot;      [\&quot;x-csrf-token\&quot;, document.querySelector(\&quot;meta[name=csrf-token]\&quot;).content],\n&quot;</span></span><br><span class="line"><span class="string">&quot;    ],\n&quot;</span></span><br><span class="line"><span class="string">&quot;    body: JSON.stringify(&#123;\n&quot;</span></span><br><span class="line"><span class="string">&quot;      slogan: \&quot;%s\&quot;\n&quot;</span></span><br><span class="line"><span class="string">&quot;    &#125;),\n&quot;</span></span><br><span class="line"><span class="string">&quot;    method: \&quot;POST\&quot;,\n&quot;</span></span><br><span class="line"><span class="string">&quot;  &#125;);\n&quot;</span></span><br><span class="line"><span class="string">&quot;&#125;)\n&quot;</span>;</span><br><span class="line"><span class="function">string <span class="title">read</span><span class="params">(<span class="type">const</span> string&amp; str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Please input &quot;</span>&lt;&lt;str&lt;&lt;<span class="string">&quot;.End with the sentence \&quot;End Of Input\&quot;:\n&quot;</span>;</span><br><span class="line">	string ans,tmp;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">getline</span>(cin,tmp) &amp;&amp; tmp!=<span class="string">&quot;End Of Input&quot;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">char</span> ch:tmp)</span><br><span class="line">			<span class="keyword">if</span>(ch==<span class="string">&#x27;\\&#x27;</span>)	ans+=<span class="string">&quot;\\\\&quot;</span>;</span><br><span class="line">			<span class="keyword">else</span>			ans+=ch;</span><br><span class="line">		ans+=<span class="string">&quot;\\n&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">string <span class="title">readline</span><span class="params">(<span class="type">const</span> string&amp; str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Please input &quot;</span>&lt;&lt;str&lt;&lt;<span class="string">&quot;:&quot;</span>;</span><br><span class="line">	string ans;</span><br><span class="line">	<span class="built_in">getline</span>(cin,ans);</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string file;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Input file name:&quot;</span>;</span><br><span class="line">	cin&gt;&gt;file;</span><br><span class="line">	FILE* fout=<span class="built_in">fopen</span>(file.<span class="built_in">c_str</span>(),<span class="string">&quot;w&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span>(fout==<span class="literal">NULL</span>)	cout&lt;&lt;<span class="string">&quot;Fail.&quot;</span>,<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">fprintf</span>(fout,<span class="string">&quot;fetch(\&quot;\&quot;, &#123;&#125;)\n&quot;</span>);</span><br><span class="line">	<span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;Please select operation type.\n&quot;</span>;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;Valid types contain [B]enben [C]hat [F]ollow [S]logan [Q]uit.\n&quot;</span>;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;Your selection:_\b&quot;</span>;</span><br><span class="line">		<span class="type">char</span> ch;</span><br><span class="line">		cin&gt;&gt;ch;</span><br><span class="line">		cin.<span class="built_in">get</span>();</span><br><span class="line">		<span class="type">int</span> uid,type;</span><br><span class="line">		<span class="keyword">if</span>(ch&gt;=<span class="string">&#x27;a&#x27;</span>)	ch=ch-<span class="string">&#x27;a&#x27;</span>+<span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">		<span class="keyword">switch</span>(ch)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;B&#x27;</span>:</span><br><span class="line">				<span class="built_in">fprintf</span>(fout,benben,<span class="built_in">read</span>(<span class="string">&quot;benben content&quot;</span>).<span class="built_in">c_str</span>());</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;C&#x27;</span>:</span><br><span class="line">				cout&lt;&lt;<span class="string">&quot;Please input uid of reciever:&quot;</span>;</span><br><span class="line">				cin&gt;&gt;uid;</span><br><span class="line">				cin.<span class="built_in">get</span>();</span><br><span class="line">				<span class="built_in">fprintf</span>(fout,chat,uid,<span class="built_in">read</span>(<span class="string">&quot;message content&quot;</span>).<span class="built_in">c_str</span>());</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;F&#x27;</span>:</span><br><span class="line">				cout&lt;&lt;<span class="string">&quot;Please input uid of the user in the relationship to be updated:&quot;</span>;</span><br><span class="line">				cin&gt;&gt;uid;</span><br><span class="line">				cout&lt;&lt;<span class="string">&quot;Please input new relationship\n&quot;</span>;</span><br><span class="line">				cout&lt;&lt;<span class="string">&quot;0: No relationship\n&quot;</span>;</span><br><span class="line">				cout&lt;&lt;<span class="string">&quot;1: Follow\n&quot;</span>;</span><br><span class="line">				cout&lt;&lt;<span class="string">&quot;2: Block\n&quot;</span>;</span><br><span class="line">				cin&gt;&gt;type;</span><br><span class="line">				cin.<span class="built_in">get</span>();</span><br><span class="line">				<span class="keyword">if</span>(type==<span class="number">2</span>)	<span class="built_in">fprintf</span>(fout,follow,uid,<span class="number">0</span>);</span><br><span class="line">				<span class="built_in">fprintf</span>(fout,follow,uid,type);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;S&#x27;</span>:</span><br><span class="line">				<span class="built_in">fprintf</span>(fout,slogan,<span class="built_in">readline</span>(<span class="string">&quot;new slogan&quot;</span>).<span class="built_in">c_str</span>());</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;Q&#x27;</span>:</span><br><span class="line">				<span class="built_in">fprintf</span>(fout,<span class="string">&quot;;&quot;</span>);</span><br><span class="line">				cout&lt;&lt;<span class="string">&quot;Done!\n&quot;</span>;</span><br><span class="line">				<span class="built_in">fclose</span>(fout);</span><br><span class="line">				<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-    </div>
-</div>
-
-<div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        HTML
-    </div>
-    <div class='spoiler-content'>
-        <iframe src="/HTML-assets/JC-by-console-on-luogu.html" height=500 style="width: 100%; top: 0;">
-</iframe>
-
-
-
-
-    </div>
-</div>
-
-<h4 id="最后一步"><a href="#最后一步" class="headerlink" title="最后一步"></a>最后一步</h4><p>我们能不能把 JC 的代码扔到云剪贴板上呢？当然也可以。直接把代码扔上去（注意一定要原汁原味，不要有任何多余内容），假设云剪贴板编号为xxxxxxxx，那么只要在 Console 中输入 <code>$.get(&quot;/paste/xxxxxxxx?_contentOnly&quot;,d=&gt;eval(d.currentData.paste.data))</code> 即可执行其中的代码。</p>
-<blockquote>
-<h6 id="作者AZaphodBeeblebrox，转载请注明出处！"><a href="#作者AZaphodBeeblebrox，转载请注明出处！" class="headerlink" title="作者AZaphodBeeblebrox，转载请注明出处！"></a>作者<a target="_blank" rel="noopener" href="https://github.com/AZaphodBeeblebrox">AZaphodBeeblebrox</a>，转载请注明出处！</h6></blockquote>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://azaphodbeeblebrox.github.io/JC-by-console-on-luogu/" data-id="clqntgrih000bsgv5exov4l5e" data-title="JC by console on luogu" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JC/" rel="tag">JC</a></li></ul>
 
     </footer>
   </div>
@@ -349,7 +132,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JC/" rel="tag">JC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
     </div>
   </div>
 
@@ -359,7 +142,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/JC/" style="font-size: 10px;">JC</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a>
+      <a href="/tags/tools/" style="font-size: 10px;">tools</a>
     </div>
   </div>
 
@@ -368,7 +151,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">十一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
     </div>
   </div>
 
@@ -384,14 +167,6 @@
             <a href="/encoding/">encoding tools</a>
           </li>
         
-          <li>
-            <a href="/cp6-entrance/">测评6号在线网络评测系统入口</a>
-          </li>
-        
-          <li>
-            <a href="/JC-by-console-on-luogu/">JC by console on luogu</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -405,7 +180,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2023 Zaphod Beeblebrox<br>
+      &copy; 2024 Zaphod Beeblebrox<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
